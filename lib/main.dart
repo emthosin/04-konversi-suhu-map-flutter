@@ -43,10 +43,12 @@ class _MyAppState extends State<MyApp> {
         _result = _inputUser + 273;
         _listHasil
             .add("Konversi dari : $_inputUser Celcius ke $_result Kelvin");
-      } else {
+      } else if (_selectedDropdown == "Reamur") {
         _result = (4 / 5) * _inputUser;
         _listHasil
             .add("Konversi dari : $_inputUser Celcius ke $_result Reamur");
+      } else {
+        _listHasil.add("Suhu belum dipilih");
       }
     });
   }
